@@ -25,7 +25,7 @@ const Fourth: React.FC = () => {
 
         <button
           onClick={onContactClick}
-          className="border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-lg"
+          className="border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-xl"
         >
           Contact me
         </button>

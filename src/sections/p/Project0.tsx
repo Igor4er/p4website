@@ -8,7 +8,8 @@ const Project0 = () => {
     >
       <div className="flex items-center justify-center h-full">
         <span className="text-xl">📁</span>
-        <h3 className="text-xl font-semibold ml-2">
+
+        <h3 className="text-xl font-semibold mr-4 ml-2">
           Натисни на папку {"--->"}
         </h3>
       </div>

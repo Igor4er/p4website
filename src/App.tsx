@@ -3,7 +3,7 @@ import First from "./sections/First";
 import Second from "./sections/Second";
 import Third from "./sections/Third";
 import Fourth from "./sections/Fourth";
-import Footer from "./sections/Footer";
+import Last from "./sections/Last";
 
 function App() {
   return (
@@ -14,6 +14,8 @@ function App() {
         <Second />
         <Third />
         <Fourth />
+
+        <Last />
       </div>
     </OrientationGuard>
   );
