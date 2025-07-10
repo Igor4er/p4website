@@ -7,7 +7,7 @@ const Last: React.FC = () => {
         Сторінка вебсайтовмісна, сорт вищий. Згідно ТУ У 27.9-44125755-002-2023.
         Прочитати до 18.12.2025. Вага= (18±722) МіБ. Виробник:{" "}
         <a
-          href="https://github.com/Igor4er"
+          href="https://blog.ihorcher.com/"
           className="underline text-slate-500/65"
           target="_blank"
         >
