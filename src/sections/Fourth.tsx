@@ -1,6 +1,7 @@
 import React from "react";
 import Aurora from "../Backgrounds/Aurora/Aurora";
-import { Search } from "lucide-react";
+import Magnet from "../Animations/Magnet/Magnet";
+import DecryptedText from "../TextAnimations/DecryptedText/DecryptedText";
 
 const Fourth: React.FC = () => {
   const onContactClick = () => {
@@ -23,12 +24,14 @@ const Fourth: React.FC = () => {
       <div className="z-10 max-w-3xl w-full flex flex-col items-center gap-8 text-center">
         <h2 className="text-3xl md:text-5xl font-bold">Зацікавлені?</h2>
 
-        <button
-          onClick={onContactClick}
-          className="border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-xl"
-        >
-          Contact me
-        </button>
+        <Magnet padding={250} disabled={false} magnetStrength={25}>
+          <button
+            onClick={onContactClick}
+            className="border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-xl"
+          >
+            Contact me
+          </button>
+        </Magnet>
 
         {/* Skills Section */}
         <div className="w-full mt-6 text-left">
@@ -87,9 +90,13 @@ const Fourth: React.FC = () => {
         <div className="w-full mt-10 text-left">
           <h3 className="text-2xl font-semibold mb-4">Досвід</h3>
           <div className="bg-white/10 p-4 rounded-xl">
-            <h4 className="text-lg font-bold">
-              Python Developer — Fructus-X, Львів
-            </h4>
+            <DecryptedText
+              className="text-lg font-bold"
+              text="Python Developer — Fructus-X, Львів"
+              animateOn="view"
+              sequential={true}
+              speed={35}
+            ></DecryptedText>
             <p className="text-sm text-slate-400">Січень 2024 - зараз</p>
             <ul className="list-disc list-inside mt-2 text-sm text-slate-300 space-y-1">
               <li>
