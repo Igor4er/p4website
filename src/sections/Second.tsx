@@ -56,8 +56,8 @@ const Second: React.FC = () => {
               <div className="mt-2">
                 Програмую вже понад{" "}
                 <span className="font-bold text-rose-400">5 років</span>, з яких{" "}
-                <span className="font-bold text-rose-400">1.5 року</span>
-                це комерційна розробка.
+                <span className="font-bold text-rose-400">1.5 року</span> це
+                комерційна розробка.
               </div>
             </Magnet>
             <Magnet padding={130} disabled={false} magnetStrength={34}>
