@@ -95,7 +95,7 @@ const Fourth: React.FC = () => {
               text="Python Developer — Fructus-X, Львів"
               animateOn="view"
               sequential={true}
-              speed={35}
+              speed={45}
             ></DecryptedText>
             <p className="text-sm text-slate-400">Січень 2024 - зараз</p>
             <ul className="list-disc list-inside mt-2 text-sm text-slate-300 space-y-1">
