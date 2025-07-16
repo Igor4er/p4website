@@ -27,7 +27,7 @@ const Fourth: React.FC = () => {
         <Magnet padding={250} disabled={false} magnetStrength={25}>
           <button
             onClick={onContactClick}
-            className="border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-xl"
+            className="cursor-pointer border-1 border-rose-500/30 backdrop-blur-2xl hover:bg-rose-700/40 duration-300 transition-colors text-white text-xl md:text-2xl font-semibold py-4 px-8 rounded-2xl shadow-xl"
           >
             Contact me
           </button>
