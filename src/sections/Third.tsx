@@ -97,7 +97,7 @@ const Third: React.FC = () => {
       </div>
 
       {isDesktop && (
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-row items-center text-white/70 animate-bounce gap-1">
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-row items-center text-white/70 animate-[bounce_1.8s_infinite] gap-1">
           <ArrowDown className="w-5 h-5" />
           <p className="text-sm font-mono">Scroll</p>
         </div>

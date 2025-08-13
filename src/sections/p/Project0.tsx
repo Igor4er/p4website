@@ -6,7 +6,7 @@ const Project0 = () => {
       className="w-full sm:my-8 sm:ml-8 sm:mr-4 md:my-16 md:ml-16 md:mr-8 border-0 bg-transparent flex items-center justify-center"
       spotlightColor="rgba(255, 80, 73, 0)"
     >
-      <div className="flex items-center justify-center h-full">
+      <div className="flex items-center justify-center h-full animate-[bounce-right_1s_infinite]">
         <span className="text-xl">📁</span>
 
         <h3 className="text-xl font-semibold mr-4 ml-2">
