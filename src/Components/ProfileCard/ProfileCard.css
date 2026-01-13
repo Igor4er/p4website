@@ -366,7 +366,7 @@
     cursor: pointer;
     transition: all 0.2s ease;
     backdrop-filter: blur(10px);
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(240, 240, 240, 0.95);
 }
 
 .pc-contact-btn:hover {
