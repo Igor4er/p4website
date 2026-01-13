@@ -8,9 +8,12 @@ import me from "../assets/me.png";
 import pattern from "../assets/pattern.png";
 import Magnet from "../Animations/Magnet/Magnet";
 import grain from "../assets/grain.jpg";
+import { useHardwareMode } from "../contexts/HardwareModeContext";
 
 const Second: React.FC = () => {
   const isDesktop = useIsLargeScreen();
+  const { isHardware, toggleMode } = useHardwareMode();
+
   return (
     <section className="min-h-screen w-screen flex flex-col items-center justify-center relative bg-gray-900 plexmono text-gray-50">
       {/* Main content area divided into two vertical blocks */}
@@ -41,41 +44,88 @@ const Second: React.FC = () => {
           >
             Мене звати Ігор
           </ScrollFloat>
-          {/* 80% */}
+
+          {/* Content changes based on hardware mode */}
           <div className="max-w-[min(42rem,80%)] whitespace-break-spaces sm:text-sm lg:text-base">
-            <Magnet padding={150} disabled={false} magnetStrength={30}>
-              <div className="mt-3">
-                Займаюсь розробкою на{" "}
-                <span className="font-bold text-orange-400">Python</span>, також
-                експерементую з{" "}
-                <span className="font-bold text-orange-400">Rust</span> та{" "}
-                <span className="font-bold text-orange-400">C++</span>
-              </div>
-            </Magnet>
-            <Magnet padding={140} disabled={false} magnetStrength={35}>
-              <div className="mt-2">
-                Програмую вже понад{" "}
-                <span className="font-bold text-rose-400">5 років</span>, з яких{" "}
-                <span className="font-bold text-rose-400">1.5 року</span> це
-                комерційна розробка.
-              </div>
-            </Magnet>
-            <Magnet padding={130} disabled={false} magnetStrength={34}>
-              <div className="mt-2">
-                Активно використовую інструменти ШІ для оптимізації робочих
-                процесів, водночас повністю розумію та контролюю увесь створений
-                код. Можу ефективно працювати як з AI-підтримкою, так і без неї.
-              </div>
-            </Magnet>
+            {isHardware ? (
+              // Hardware Mode Content
+              <>
+                <Magnet padding={150} disabled={false} magnetStrength={30}>
+                  <div className="mt-3">
+                    Embedded-інженер з практичним досвідом розробки прошивок для{" "}
+                    <span className="font-bold text-orange-400">ESP32</span>{" "}
+                    використовуючи{" "}
+                    <span className="font-bold text-orange-400">ESP-IDF</span>{" "}
+                    та{" "}
+                    <span className="font-bold text-orange-400">FreeRTOS</span>.
+                  </div>
+                </Magnet>
+                <Magnet padding={140} disabled={false} magnetStrength={35}>
+                  <div className="mt-2">
+                    Маю міцні основи в апаратній частині та професійний досвід у{" "}
+                    <span className="font-bold text-rose-400">
+                      backend розробці
+                    </span>
+                    .
+                  </div>
+                </Magnet>
+                <Magnet padding={130} disabled={false} magnetStrength={34}>
+                  <div className="mt-2">
+                    Комфортно працюю близько до апаратури, читаю datasheet'и та
+                    довідкові посібники, створюю надійні вбудовані системи від
+                    прототипу до робочого пристрою.
+                  </div>
+                </Magnet>
+              </>
+            ) : (
+              // Software Mode Content
+              <>
+                <Magnet padding={150} disabled={false} magnetStrength={30}>
+                  <div className="mt-3">
+                    Займаюсь розробкою на{" "}
+                    <span className="font-bold text-orange-400">Python</span>,
+                    також експерементую з{" "}
+                    <span className="font-bold text-orange-400">Rust</span> та{" "}
+                    <span className="font-bold text-orange-400">C++</span>
+                  </div>
+                </Magnet>
+                <Magnet padding={140} disabled={false} magnetStrength={35}>
+                  <div className="mt-2">
+                    Програмую вже понад{" "}
+                    <span className="font-bold text-rose-400">5 років</span>, з
+                    яких <span className="font-bold text-rose-400">2 роки</span>{" "}
+                    це комерційна розробка.
+                  </div>
+                </Magnet>
+                <Magnet padding={130} disabled={false} magnetStrength={34}>
+                  <div className="mt-2">
+                    Активно використовую інструменти ШІ для оптимізації робочих
+                    процесів, водночас повністю розумію та контролюю увесь
+                    створений код. Можу ефективно працювати як з AI-підтримкою,
+                    так і без неї.
+                  </div>
+                </Magnet>
+
+                {/* Hardware Toggle Button - Only shown in software mode */}
+                <div className="mt-4">
+                  <button
+                    onClick={toggleMode}
+                    className="text-sm text-slate-400 hover:text-white transition-colors underline"
+                  >
+                    Шукаєте hardware розробника?
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
 
-        {/* Right block - half screen width, empty */}
+        {/* Right block - half screen width */}
         <div className="w-1/2 flex items-center justify-center p-4 sm:p-0 relative z-10">
           <ProfileCard
             className="sm:scale-150 md:scale-125 lg:scale-100"
             name="Ihor Cher"
-            title="Python Engineer"
+            title={isHardware ? "Embedded Engineer" : "Python Engineer"}
             handle="ihorcher"
             status="Active"
             contactText="Contact Me"
@@ -92,7 +142,6 @@ const Second: React.FC = () => {
       </div>
 
       {/* Scroll indicator at the bottom */}
-
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70 animate-bounce">
         <p className="text-sm mb-2 font-mono">Scroll</p>
         <ArrowDown className="w-6 h-6" />

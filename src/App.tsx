@@ -1,4 +1,5 @@
 import OrientationGuard from "./OrientationGurad";
+import { HardwareModeProvider } from "./contexts/HardwareModeProvider";
 import First from "./sections/First";
 import Second from "./sections/Second";
 import Third from "./sections/Third";
@@ -8,15 +9,17 @@ import Last from "./sections/Last";
 function App() {
   return (
     <OrientationGuard>
-      <div className="bg-gray-900 overflow-x-clip overflow-y-hidden">
-        <First />
+      <HardwareModeProvider>
+        <div className="bg-gray-900 overflow-x-clip overflow-y-hidden">
+          <First />
 
-        <Second />
-        <Third />
-        <Fourth />
+          <Second />
+          <Third />
+          <Fourth />
 
-        <Last />
-      </div>
+          <Last />
+        </div>
+      </HardwareModeProvider>
     </OrientationGuard>
   );
 }
