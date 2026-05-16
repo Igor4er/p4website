@@ -69,7 +69,7 @@ const Fourth: React.FC = () => {
                 <ul className="list-disc list-inside space-y-1 ml-2">
                   <li>
                     <strong>Microcontrollers:</strong> ESP32 / ESP8266, AVR
-                    (Arduino), RP2040
+                    (Arduino), RP2040, nRF52 series
                   </li>
                   <li>
                     <strong>Frameworks & SDKs:</strong> ESP-IDF, Arduino

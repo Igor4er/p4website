@@ -52,12 +52,14 @@ const Second: React.FC = () => {
               <>
                 <Magnet padding={150} disabled={false} magnetStrength={30}>
                   <div className="mt-3">
-                    Embedded-інженер з практичним досвідом розробки прошивок для{" "}
-                    <span className="font-bold text-orange-400">ESP32</span>{" "}
-                    використовуючи{" "}
-                    <span className="font-bold text-orange-400">ESP-IDF</span>{" "}
-                    та{" "}
-                    <span className="font-bold text-orange-400">FreeRTOS</span>.
+                    Embedded-інженер з профільним досвідом розробки вбудованого ПО для{" "}
+                    <span className="font-bold text-orange-400">ESP32</span> з{" "}
+                    <span className="font-bold text-orange-400">ESP-IDF</span> та{" "}
+                    <span className="font-bold text-orange-400">FreeRTOS</span>, а також для{" "}
+                    <span className="font-bold text-orange-400">nRF</span> мікроконтролерів
+                    з використанням{" "}
+                    <span className="font-bold text-orange-400">nRF Connect SDK</span> та{" "}
+                    <span className="font-bold text-orange-400">Zephyr OS</span>.
                   </div>
                 </Magnet>
                 <Magnet padding={140} disabled={false} magnetStrength={35}>
